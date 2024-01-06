@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting App</title>
+    <link rel="stylesheet" href="/css/home_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Meeting App</h1>
+        <div class="buttons">
+            <a href="/room"><button class="create-meeting-btn">Create New Meeting</button></a>
+            <div class="join-meeting">
+                <input type="text" placeholder="Enter meet link" id="meeting-link-text-box">
+                <button id="join-button">Join Meeting</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    document.getElementById('join-button').addEventListener('click', function() {
+        let input = document.getElementById('meeting-link-text-box').value;
+        window.location.assign(input);
+        document.getElementById('meeting-link-text-box').value = "";
+    });
+</script>
